@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Profile Template</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f4f6f9;
+  color: #333;
+}
+
+.container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+/* HERO */
+
+.hero {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.hero img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #4f8cff;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background: #0d67fe;
+}
+
+/* SOCIAL SECTION */
+
+.section {
+  margin-top: 50px;
+}
+
+.section h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.social-card {
+  background: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #333;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.social-card:hover {
+  transform: translateY(-5px);
+  background: #4f8cff;
+  color: white;
+}
+
+.footer {
+  margin-top: 60px;
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- HERO -->
+  <div class="hero">
+    <img src="https://cdn.pixabay.com/photo/2017/07/18/23/23/user-2517433_640.png" alt="Profile">
+    <h1>Jack Ashford</h1>
+    <p>Senior Manager | Tech Enthusiast</p>
+    <a href="#" class="button">Contact Me</a>
+  </div>
+
+  <!-- SOCIAL LINKS -->
+  <div class="section">
+    <h2>Social Links</h2>
+    <div class="social-grid">
+      <a href="#" class="social-card">Twitter</a>
+      <a href="#" class="social-card">LinkedIn</a>
+      <a href="#" class="social-card">GitHub</a>
+      <a href="#" class="social-card">Instagram</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    © 2024 Jack Ashford. All rights reserved.
+  </div>
+
+</div>
+
+</body>
+</html>
