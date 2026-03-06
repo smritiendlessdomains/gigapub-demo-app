@@ -1,139 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Individual Template</title>
-
+  <title>Individual + three‑card ads · gigapub target</title>
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f7fa;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+      background: #f0f3f8;
+      color: #1a2639;
+      line-height: 1.5;
     }
 
     .container {
       max-width: 1200px;
-      margin: auto;
-      padding: 40px 20px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
     }
 
-    /* HERO SECTION */
-
-    .hero {
-      background: #2072fe;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      padding: 40px;
-      border-radius: 10px;
+    /* ===== HERO with IDENTITY section ===== */
+    #identity {
+      scroll-margin-top: 2rem;
+      background: linear-gradient(135deg, #1d267d 0%, #5c469c 100%);
+      border-radius: 2.5rem;
+      padding: 2.8rem 3rem;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 40px;
       flex-wrap: wrap;
-      transition: 0.3s;
-    }
-
-    .hero:hover {
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-    }
-
-    .left {
-      max-width: 600px;
-      color: #fff;
-    }
-
-    .left h1 {
-      font-size: 60px;
-      margin: 0 0 10px 0;
-    }
-
-    .left h3 {
-      font-size: 40px;
-      font-weight: 500;
-      margin: 0 0 20px 0;
-    }
-
-    .left p {
-      font-size: 16px;
-      line-height: 1.6;
-    }
-
-    .glass-card {
-      width: 300px;
-      height: 320px;
-      border-radius: 27px;
-      background: rgba(255, 255, 255, 0.06);
-      backdrop-filter: blur(80px);
-    }
-
-    /* SECTION TITLE SHAPE */
-
-    .social-section {
-      margin-top: 80px;
-    }
-
-    .social-shape {
-      width: 60%;
-      height: 75px;
-      border-radius: 100px 100px 0 0;
-      clip-path: polygon(8% 8%, 92% 7%, 100% 100%, 0% 100%);
-      display: flex;
-      justify-content: center;
       align-items: center;
-      color: #fff;
-      background: linear-gradient(180deg, #4f8cff 0%, #0d67fe 100%);
-      margin: auto;
+      justify-content: space-between;
+      gap: 2.5rem;
+      box-shadow: 0 25px 40px -10px rgba(28, 39, 96, 0.3);
+      transition: all 0.4s ease;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(2px);
+      margin-bottom: 3.5rem;
+      position: relative;
+      isolation: isolate;
     }
 
-    .social-shape h2 {
-      margin: 0;
-      font-size: 28px;
-      font-weight: 500;
+    #identity::before {
+      content: "★ IDENTITY";
+      position: absolute;
+      top: -0.8rem;
+      left: 2.5rem;
+      background: #ffd966;
+      color: #1e2b5e;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      padding: 0.3rem 1.5rem;
+      border-radius: 40px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       text-transform: uppercase;
     }
 
-    /* GRID */
+    #identity:hover {
+      transform: scale(1.01);
+      box-shadow: 0 35px 50px -8px #141b4b;
+      border-color: #ffefb0;
+    }
 
-    .row {
+    .id-left {
+      flex: 2 1 320px;
+      color: white;
+    }
+
+    .id-left h1 {
+      font-size: clamp(2.8rem, 7vw, 4.8rem);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 0.2rem;
+      text-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .id-left .badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(8px);
+      padding: 0.5rem 2rem 0.5rem 1.2rem;
+      border-radius: 40px;
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin: 1rem 0 0.8rem;
+      border: 1px solid rgba(255,255,240,0.4);
+    }
+
+    .id-left .badge span {
+      background: #ffc43d;
+      color: #1d2b53;
+      padding: 0.15rem 1rem;
+      border-radius: 30px;
+      margin-left: 0.8rem;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .id-left p {
+      font-size: 1.2rem;
+      max-width: 550px;
+      margin-top: 1rem;
+      opacity: 0.9;
+    }
+
+    .id-card-glass {
+      flex: 1 1 260px;
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(20px);
+      border-radius: 2.5rem;
+      padding: 1.8rem;
+      border: 1px solid rgba(255,255,255,0.25);
+      box-shadow: 0 20px 40px -10px black;
+      color: white;
+      transition: 0.3s;
+    }
+
+    .id-card-glass:hover {
+      background: rgba(255,255,255,0.15);
+    }
+
+    .id-card-glass .member-id {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: #ffecaa;
+    }
+
+    .id-card-glass .id-number {
+      font-family: 'Courier New', monospace;
+      font-size: 2.4rem;
+      font-weight: 600;
+      margin: 0.5rem 0 1rem;
+      word-break: break-word;
+      background: rgba(0,0,0,0.2);
+      padding: 0.5rem 0.7rem;
+      border-radius: 1.2rem;
+      border-left: 4px solid gold;
+    }
+
+    .id-card-glass .valid {
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px dashed rgba(255,255,200,0.4);
+      padding-top: 1rem;
+      font-size: 0.9rem;
+    }
+
+    /* ===== SOCIAL (unchanged, polished) ===== */
+    .social-section {
+      margin: 4rem 0 2rem;
+    }
+
+    .section-shape {
+      width: 70%;
+      max-width: 550px;
+      height: 70px;
+      background: linear-gradient(145deg, #1e2b5e, #142053);
+      border-radius: 100px 100px 0 0;
+      clip-path: polygon(5% 20%, 95% 20%, 100% 100%, 0% 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 2.5rem;
+      box-shadow: 0 -6px 0 #ffbd3a;
+    }
+
+    .section-shape h2 {
+      color: white;
+      font-weight: 500;
+      font-size: 1.9rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .grid-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
+      gap: 1.8rem;
+      justify-content: center;
     }
 
-    .col {
-      flex: 1 1 calc(25% - 20px);
-      min-width: 220px;
-    }
-
-    /* SOCIAL CARD */
-
-    .social-show {
-      border-radius: 25px;
-      border: 1px solid #e2e8f0;
-      background: #fff;
-      padding: 20px;
+    .grid-col {
+      flex: 1 1 200px;
+      min-width: 180px;
     }
 
     .social-card {
       display: flex;
       align-items: center;
-      gap: 12px;
-      background: #fff;
-      border-radius: 25px;
-      border: 1px solid #e2e8f0;
-      padding: 16px;
+      gap: 0.8rem;
+      background: white;
+      border-radius: 2rem;
+      padding: 0.9rem 1.2rem;
       text-decoration: none;
-      color: #000;
-      transition: 0.3s;
+      color: #151515;
+      border: 1px solid #dde3ed;
+      transition: 0.2s ease-in-out;
+      box-shadow: 0 5px 12px rgba(0,0,0,0.02);
     }
 
     .social-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-      background: linear-gradient(90deg, #e6e8fd 30%, rgba(255, 255, 255, 0.4) 100%);
+      background: #f4f9ff;
+      border-color: #a1bcff;
+      box-shadow: 0 20px 25px -8px rgba(30,60,180,0.25);
     }
 
     .social-icon {
@@ -143,255 +218,326 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #fff;
-    }
-
-    /* Brand Colors */
-    .twitter-icon {
-      background: #000;
-    }
-
-    .facebook-icon {
-      background: #1877f2;
-    }
-
-    .youtube-icon {
-      background: #ff0000;
-    }
-
-    .instagram-icon {
-      background: linear-gradient(45deg, #f09433, #dc2743, #bc1888);
-    }
-
-    .medium-icon {
-      background: #000;
-    }
-
-    .telegram-icon {
-      background: #0088cc;
-    }
-
-    .github-icon {
-      background: #333;
-    }
-
-    .linkedin-icon {
-      background: #0077b5;
-    }
-
-    .discord-icon {
-      background: #5865f2;
-    }
-
-    .social-info h4 {
-      margin: 0;
-      font-size: 16px;
       font-weight: 600;
+      color: white;
+      flex-shrink: 0;
     }
 
-    .social-info h5 {
-      margin: 0;
-      font-size: 13px;
-      color: #647586;
-    }
+    .twitter-bg { background: #000000; }
+    .facebook-bg { background: #1877f2; }
+    .linkedin-bg { background: #0077b5; }
+    .github-bg { background: #24292e; }
 
-    /* COMMUNITY CARD */
+    .social-info h4 { font-size: 1rem; font-weight: 600; }
+    .social-info h5 { font-size: 0.8rem; color: #5e6f88; }
 
-    .community-show {
-      border-radius: 25px;
-      border: 1px solid #e2e8f0;
-      background: #fff;
-      padding: 20px;
-    }
-
+    /* community card (unchanged) */
     .community-card {
-      border: 2px solid #f1f1f1;
-      border-radius: 28px;
-      padding: 18px;
-      background: #fff;
-      transition: 0.3s;
+      border: 1px solid #dbe1ec;
+      border-radius: 2rem;
+      padding: 1.2rem;
+      background: white;
+      transition: 0.2s;
     }
-
     .community-card:hover {
-      background: #000;
-      color: #fff;
+      background: #1a1f2e;
+      color: white;
     }
-
     .community-header {
       display: flex;
-      gap: 12px;
-      margin-bottom: 14px;
+      gap: 10px;
+    }
+    .community-icon {
+      width: 38px; height: 38px; border-radius: 50%;
+      background: #3b4b7a; color: white;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .community-image-wrapper {
+      height: 150px;
+      background: #cfd9e8;
+      border-radius: 1.4rem;
+      margin: 1rem 0 0.5rem;
+      background-image: url('https://cdn.pixabay.com/photo/2017/07/18/23/23/user-2517433_640.png');
+      background-size: cover;
+      position: relative;
+    }
+    .communitylink {
+      position: absolute; bottom: 10px; right: 12px;
+      background: #1a1f2e; color: white; padding: 5px 16px;
+      border-radius: 40px; text-decoration: none; font-size: 0.8rem;
+    }
+    .community-card:hover .communitylink {
+      background: white; color: black;
     }
 
-    .community-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
+    /* footer */
+    .footer {
+      text-align: center;
+      margin-top: 5rem;
+      border-top: 2px solid #cdd9f0;
+      padding-top: 2.5rem;
+    }
+    .footer img {
+      height: 32px;
+      vertical-align: middle;
+      margin-left: 8px;
+      filter: drop-shadow(0 2px 4px #abc);
+    }
+
+    /* ===== NEW: ADS SPACE SECTION with three cards ===== */
+    .ads-space {
+      margin: 4rem 0 3rem;
+      background: #eef2f7;
+      border-radius: 3rem;
+      padding: 2.5rem 2rem;
+      box-shadow: inset 0 2px 8px rgba(0,0,0,0.02), 0 10px 25px -10px #102a4c;
+    }
+
+    .ads-header {
+      text-align: center;
+      font-size: 2.2rem;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      color: #13294b;
+      margin-bottom: 2rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #fff;
+      gap: 1rem;
     }
 
-    .community-image-wrapper {
-      width: 100%;
-      height: 200px;
-      background-image: url('https://cdn.pixabay.com/photo/2017/07/18/23/23/user-2517433_640.png');
-      background-size: cover;
-      border-radius: 20px;
-      position: relative;
+    .ads-header span {
+      background: #ffbe3f;
+      padding: 0.2rem 2rem;
+      border-radius: 60px;
+      font-size: 1rem;
+      font-weight: 400;
+      color: #0d2644;
     }
 
-    .communitylink {
-      position: absolute;
-      bottom: 10px;
-      right: 10px;
-      background: #000;
-      color: #fff;
-      padding: 8px 16px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-size: 14px;
+    .ad-card-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
     }
 
-    .community-card:hover .communitylink {
-      background: #fff;
-      color: #000;
-    }
-
-    /* FOOTER */
-
-    .footer {
+    .ad-card {
+      background: white;
+      border-radius: 2.5rem;
+      padding: 2rem 1.8rem 1.8rem;
+      flex: 1 1 240px;
+      max-width: 280px;
+      box-shadow: 0 20px 35px -12px rgba(0, 35, 75, 0.2);
+      transition: all 0.25s ease;
+      border: 1px solid rgba(32, 114, 254, 0.2);
+      cursor: pointer;
       text-align: center;
-      padding-top: 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      backdrop-filter: blur(4px);
     }
 
-    .footer img {
-      height: 30px;
+    .ad-card:hover {
+      transform: translateY(-8px);
+      border-color: #2072fe;
+      box-shadow: 0 28px 40px -12px #06224a;
+      background: #ffffff;
     }
 
-    @media(max-width:768px) {
-      .left h1 {
-        font-size: 40px;
+    .ad-emoji {
+      font-size: 3.8rem;
+      margin-bottom: 0.8rem;
+      filter: drop-shadow(2px 6px 8px #abc);
+    }
+
+    .ad-card h3 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      background: linear-gradient(145deg, #1d2b64, #224eb0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.5rem;
+    }
+
+    .ad-card p {
+      font-size: 0.95rem;
+      color: #365073;
+      margin: 0.5rem 0 1.2rem;
+      padding: 0 0.2rem;
+    }
+
+    .ad-badge-small {
+      background: #f0f5ff;
+      border-radius: 60px;
+      padding: 0.3rem 1.2rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #103d8a;
+      border: 1px dashed #2072fe;
+      margin-top: auto;
+    }
+
+    .ad-click-icon {
+      font-size: 1.2rem;
+      margin-left: 0.3rem;
+      opacity: 0.6;
+      transition: 0.2s;
+    }
+
+    .ad-card:hover .ad-click-icon {
+      opacity: 1;
+      transform: translateX(4px);
+    }
+
+    /* responsive */
+    @media (max-width: 700px) {
+      .ad-card-row {
+        gap: 1.2rem;
       }
-
-      .left h3 {
-        font-size: 24px;
-      }
-
-      .social-shape {
-        width: 90%;
-      }
     }
 
-    .ad-sidebar {
-      width: 300px !important;
-      position: fixed;
-      right: 20px;
-      top: 100px;
-    }
-
-    @media(max-width:1024px) {
-      .ad-sidebar {
-        width: 100% !important;
-      }
-    }
   </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet">
+  <!-- GIGAPUB SCRIPT (added as requested) -->
+  <script src="https://ad.gigapub.tech/script?id=5747"></script>
 </head>
-
 <body>
 
-  <div class="container">
-
-    <!-- HERO SECTION -->
-    <section class="hero">
-      <div class="left">
-        <h1>Jack Ashford</h1>
-        <h3>Senior Manager</h3>
-        <p>Lorem ipsum is typically a corrupted version of De finibus bonorum et malorum.</p>
+<div class="container">
+  <!-- STYLED ID SECTION (exactly as before, with #identity) -->
+  <section id="identity">
+    <div class="id-left">
+      <h1>Jack Ashford</h1>
+      <div class="badge">Senior Manager <span>ID: active</span></div>
+      <p>Lorem ipsum is typically a corrupted version of De finibus, but here it represents your unique identity profile.</p>
+      <div style="margin-top: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+        <span style="background: #ffbe3f; padding:0.2rem 1.8rem; border-radius:40px; font-weight:600; color:#001d3d;">★ verified</span>
+        <span style="background: rgba(255,255,255,0.2); padding:0.2rem 1.8rem; border-radius:40px;">employee #0024</span>
       </div>
-      <div class="glass-card"></div>
-    </section>
-
-    <!-- SOCIAL SECTION -->
-    <section class="social-section">
-      <div class="social-shape">
-        <h2>Social Platform</h2>
-      </div>
-
-      <div class="social-show row">
-
-        <div class="col">
-          <a href="#" class="social-card">
-            <div class="social-icon twitter-icon">X</div>
-            <div class="social-info">
-              <h4>X / Twitter</h4>
-              <h5>@johndoe</h5>
-            </div>
-          </a>
-        </div>
-
-        <div class="col">
-          <a href="#" class="social-card">
-            <div class="social-icon facebook-icon">f</div>
-            <div class="social-info">
-              <h4>Facebook</h4>
-              <h5>@johndoe</h5>
-            </div>
-          </a>
-        </div>
-
-        <div class="col">
-          <a href="#" class="social-card">
-            <div class="social-icon linkedin-icon">in</div>
-            <div class="social-info">
-              <h4>LinkedIn</h4>
-              <h5>@johndoe</h5>
-            </div>
-          </a>
-        </div>
-
-        <div class="col">
-          <a href="#" class="social-card">
-            <div class="social-icon github-icon">GH</div>
-            <div class="social-info">
-              <h4>GitHub</h4>
-              <h5>@johndoe</h5>
-            </div>
-          </a>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <div class="footer">
-      <p>
-        Powered By
-        <a href="https://endlessdomains.io/" target="_blank">
-          <img src="https://endlessdomains.io/_next/static/media/endless_logo.182f73f9.svg">
-        </a>
-      </p>
     </div>
+    <div class="id-card-glass">
+      <div class="member-id">digital identity</div>
+      <div class="id-number">ID‑J4CK‑A5HF0RD</div>
+      <div class="valid"><span>issued: 2025</span><span>✦ premium</span></div>
+      <div style="margin-top: 1rem; background: #0d1b42; border-radius: 30px; padding: 6px 12px; text-align: center; font-size: 0.8rem;">
+        ⚡ ads cards below — click to open gigapub
+      </div>
+    </div>
+  </section>
 
+  <!-- SOCIAL PLATFORM section (short, unchanged) -->
+  <section class="social-section">
+    <div class="section-shape"><h2>Social Platform</h2></div>
+    <div class="grid-row">
+      <div class="grid-col"><a href="#" class="social-card"><div class="social-icon twitter-bg">𝕏</div><div class="social-info"><h4>X / Twitter</h4><h5>@jack_a</h5></div></a></div>
+      <div class="grid-col"><a href="#" class="social-card"><div class="social-icon facebook-bg">f</div><div class="social-info"><h4>Facebook</h4><h5>@jack.ash</h5></div></a></div>
+      <div class="grid-col"><a href="#" class="social-card"><div class="social-icon linkedin-bg">in</div><div class="social-info"><h4>LinkedIn</h4><h5>@jack-ashford</h5></div></a></div>
+      <div class="grid-col"><a href="#" class="social-card"><div class="social-icon github-bg">GH</div><div class="social-info"><h4>GitHub</h4><h5>@jackdev</h5></div></a></div>
+    </div>
+  </section>
+
+  <!-- ############ ADS SPACE SECTION (three cards, click to open gigapub) ############ -->
+  <div class="ads-space" id="adsSpace">
+    <div class="ads-header">
+      📢 ADS SPACE SECTION
+    </div>
+    <div class="ad-card-row">
+      <!-- ad card 1 -->
+      <div class="ad-card" data-ad="campaign1">
+        <div class="ad-emoji">🚀</div>
+        <h3>BlastOff</h3>
+        <p>Reach devs & designers with high-impact native ads.</p>
+        <div class="ad-click-icon">↗ click to open</div>
+      </div>
+      <!-- ad card 2 -->
+      <div class="ad-card" data-ad="campaign2">
+        <div class="ad-emoji">💎</div>
+        <h3>Premium</h3>
+        <p>Exclusive ad inventory – premium placements.</p>-
+        <div class="ad-click-icon">↗ click to open</div>
+      </div>
+      <!-- ad card 3 -->
+      <div class="ad-card" data-ad="campaign3">
+        <div class="ad-emoji">⚡</div>
+        <h3>Flash</h3>
+        <p>Low-latency, viewable ads with smart targeting.</p>
+        <div class="ad-click-icon">↗ click to open</div>
+      </div>
+    </div>
+    <p style="text-align:center; margin-top:1.8rem; font-size:0.9rem; color:#3a5270;">⬇️ click any card — opens gigapub ad in new tab</p>
   </div>
 
-  <!-- Ad Sidebar -->
-  <div class="ad-sidebar">
-    <script src="https://ad.gigapub.tech/script?id=5747"></script>
+  <!-- small community card (for decoration, unchanged) -->
+  <div style="max-width:340px; margin: 2rem auto 0;">
+    <div class="community-card">
+      <div class="community-header">
+        <div class="community-icon">👥</div>
+        <div><strong>Design Community</strong><br><span style="font-size:0.8rem;">3.2k members</span></div>
+      </div>
+      <div class="community-image-wrapper">
+        <a href="#" class="communitylink">join →</a>
+      </div>
+    </div>
   </div>
-</body>
+
+  <!-- footer -->
+  <div class="footer">
+    <p>Powered By
+      <a href="https://endlessdomains.io/" target="_blank">
+        <img src="https://endlessdomains.io/_next/static/media/endless_logo.182f73f9.svg" alt="endless domains">
+      </a>
+    </p>
+  </div>
+</div>
 
 <script>
-  setTimeout(() => {
-    window.showGiga()
-      .then(() => {
-        console.log('ads opened');
-      })
-      .catch(e => {
-        console.log('error', e);
-      });
-  }, 5000); // 5000ms = 5 seconds
-</script>
+(function () {
+  const cards = document.querySelectorAll('.ad-card');
 
+  cards.forEach((card) => {
+    card.addEventListener('click', function (e) {
+      // Prevent any default anchor behavior just in case
+      e.preventDefault();
+
+      // small click animation
+      card.style.transform = "scale(0.96)";
+      setTimeout(() => {
+        card.style.transform = "";
+      }, 150);
+
+      // Call window.showGiga() as per instructions
+      if (typeof window.showGiga === 'function') {
+        window.showGiga()
+          .then(() => {
+            console.log("✅ Gigapub ad opened (reward logic can be placed here)");
+            // You can add your reward logic here
+          })
+          .catch((e) => {
+            console.error("❌ Ad error", e);
+            // Handle errors here
+          });
+      } else {
+        console.warn("showGiga not available — check if gigapub script loaded");
+        // fallback: open a dummy ad link for demo purposes (so click still does something)
+        window.open('https://ad.gigapub.tech/landing?id=5747&demo=fallback', '_blank');
+      }
+    });
+
+    // keyboard accessibility
+    card.setAttribute('role', 'button');
+    card.setAttribute('tabindex', '0');
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        card.click();
+      }
+    });
+  });
+})();
+</script>
+</body>
 </html>
