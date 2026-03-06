@@ -1,344 +1,391 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Individual Template</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Individual Template</title>
 
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f5f7fa;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+    }
 
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 40px 20px;
-}
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+    }
 
-/* HERO SECTION */
+    /* HERO SECTION */
 
-.hero {
-  background: #2072fe;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 40px;
-  border-radius: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 40px;
-  flex-wrap: wrap;
-  transition: 0.3s;
-}
+    .hero {
+      background: #2072fe;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 40px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      transition: 0.3s;
+    }
 
-.hero:hover {
-  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-}
+    .hero:hover {
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
 
-.left {
-  max-width: 600px;
-  color: #fff;
-}
+    .left {
+      max-width: 600px;
+      color: #fff;
+    }
 
-.left h1 {
-  font-size: 60px;
-  margin: 0 0 10px 0;
-}
+    .left h1 {
+      font-size: 60px;
+      margin: 0 0 10px 0;
+    }
 
-.left h3 {
-  font-size: 40px;
-  font-weight: 500;
-  margin: 0 0 20px 0;
-}
+    .left h3 {
+      font-size: 40px;
+      font-weight: 500;
+      margin: 0 0 20px 0;
+    }
 
-.left p {
-  font-size: 16px;
-  line-height: 1.6;
-}
+    .left p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
 
-.glass-card {
-  width: 300px;
-  height: 320px;
-  border-radius: 27px;
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(80px);
-}
+    .glass-card {
+      width: 300px;
+      height: 320px;
+      border-radius: 27px;
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(80px);
+    }
 
-/* SECTION TITLE SHAPE */
+    /* SECTION TITLE SHAPE */
 
-.social-section {
-  margin-top: 80px;
-}
+    .social-section {
+      margin-top: 80px;
+    }
 
-.social-shape {
-  width: 60%;
-  height: 75px;
-  border-radius: 100px 100px 0 0;
-  clip-path: polygon(8% 8%, 92% 7%, 100% 100%, 0% 100%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  background: linear-gradient(180deg, #4f8cff 0%, #0d67fe 100%);
-  margin: auto;
-}
+    .social-shape {
+      width: 60%;
+      height: 75px;
+      border-radius: 100px 100px 0 0;
+      clip-path: polygon(8% 8%, 92% 7%, 100% 100%, 0% 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      background: linear-gradient(180deg, #4f8cff 0%, #0d67fe 100%);
+      margin: auto;
+    }
 
-.social-shape h2 {
-  margin: 0;
-  font-size: 28px;
-  font-weight: 500;
-  text-transform: uppercase;
-}
+    .social-shape h2 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
 
-/* GRID */
+    /* GRID */
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
 
-.col {
-  flex: 1 1 calc(25% - 20px);
-  min-width: 220px;
-}
+    .col {
+      flex: 1 1 calc(25% - 20px);
+      min-width: 220px;
+    }
 
-/* SOCIAL CARD */
+    /* SOCIAL CARD */
 
-.social-show {
-  border-radius: 25px;
-  border: 1px solid #e2e8f0;
-  background: #fff;
-  padding: 20px;
-}
+    .social-show {
+      border-radius: 25px;
+      border: 1px solid #e2e8f0;
+      background: #fff;
+      padding: 20px;
+    }
 
-.social-card {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  background: #fff;
-  border-radius: 25px;
-  border: 1px solid #e2e8f0;
-  padding: 16px;
-  text-decoration: none;
-  color: #000;
-  transition: 0.3s;
-}
+    .social-card {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: #fff;
+      border-radius: 25px;
+      border: 1px solid #e2e8f0;
+      padding: 16px;
+      text-decoration: none;
+      color: #000;
+      transition: 0.3s;
+    }
 
-.social-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-  background: linear-gradient(90deg, #e6e8fd 30%, rgba(255,255,255,0.4) 100%);
-}
+    .social-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      background: linear-gradient(90deg, #e6e8fd 30%, rgba(255, 255, 255, 0.4) 100%);
+    }
 
-.social-icon {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-}
+    .social-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
 
-/* Brand Colors */
-.twitter-icon { background: #000; }
-.facebook-icon { background: #1877f2; }
-.youtube-icon { background: #ff0000; }
-.instagram-icon { background: linear-gradient(45deg,#f09433,#dc2743,#bc1888); }
-.medium-icon { background: #000; }
-.telegram-icon { background: #0088cc; }
-.github-icon { background: #333; }
-.linkedin-icon { background: #0077b5; }
-.discord-icon { background: #5865f2; }
+    /* Brand Colors */
+    .twitter-icon {
+      background: #000;
+    }
 
-.social-info h4 {
-  margin: 0;
-  font-size: 16px;
-  font-weight: 600;
-}
+    .facebook-icon {
+      background: #1877f2;
+    }
 
-.social-info h5 {
-  margin: 0;
-  font-size: 13px;
-  color: #647586;
-}
+    .youtube-icon {
+      background: #ff0000;
+    }
 
-/* COMMUNITY CARD */
+    .instagram-icon {
+      background: linear-gradient(45deg, #f09433, #dc2743, #bc1888);
+    }
 
-.community-show {
-  border-radius: 25px;
-  border: 1px solid #e2e8f0;
-  background: #fff;
-  padding: 20px;
-}
+    .medium-icon {
+      background: #000;
+    }
 
-.community-card {
-  border: 2px solid #f1f1f1;
-  border-radius: 28px;
-  padding: 18px;
-  background: #fff;
-  transition: 0.3s;
-}
+    .telegram-icon {
+      background: #0088cc;
+    }
 
-.community-card:hover {
-  background: #000;
-  color: #fff;
-}
+    .github-icon {
+      background: #333;
+    }
 
-.community-header {
-  display: flex;
-  gap: 12px;
-  margin-bottom: 14px;
-}
+    .linkedin-icon {
+      background: #0077b5;
+    }
 
-.community-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-}
+    .discord-icon {
+      background: #5865f2;
+    }
 
-.community-image-wrapper {
-  width: 100%;
-  height: 200px;
-  background-image: url('https://cdn.pixabay.com/photo/2017/07/18/23/23/user-2517433_640.png');
-  background-size: cover;
-  border-radius: 20px;
-  position: relative;
-}
+    .social-info h4 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 600;
+    }
 
-.communitylink {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  background: #000;
-  color: #fff;
-  padding: 8px 16px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-size: 14px;
-}
+    .social-info h5 {
+      margin: 0;
+      font-size: 13px;
+      color: #647586;
+    }
 
-.community-card:hover .communitylink {
-  background: #fff;
-  color: #000;
-}
+    /* COMMUNITY CARD */
 
-/* FOOTER */
+    .community-show {
+      border-radius: 25px;
+      border: 1px solid #e2e8f0;
+      background: #fff;
+      padding: 20px;
+    }
 
-.footer {
-  text-align: center;
-  padding-top: 80px;
-}
+    .community-card {
+      border: 2px solid #f1f1f1;
+      border-radius: 28px;
+      padding: 18px;
+      background: #fff;
+      transition: 0.3s;
+    }
 
-.footer img {
-  height: 30px;
-}
+    .community-card:hover {
+      background: #000;
+      color: #fff;
+    }
 
-@media(max-width:768px){
-  .left h1 { font-size: 40px; }
-  .left h3 { font-size: 24px; }
-  .social-shape { width: 90%; }
-}
-</style>
+    .community-header {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .community-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+
+    .community-image-wrapper {
+      width: 100%;
+      height: 200px;
+      background-image: url('https://cdn.pixabay.com/photo/2017/07/18/23/23/user-2517433_640.png');
+      background-size: cover;
+      border-radius: 20px;
+      position: relative;
+    }
+
+    .communitylink {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background: #000;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .community-card:hover .communitylink {
+      background: #fff;
+      color: #000;
+    }
+
+    /* FOOTER */
+
+    .footer {
+      text-align: center;
+      padding-top: 80px;
+    }
+
+    .footer img {
+      height: 30px;
+    }
+
+    @media(max-width:768px) {
+      .left h1 {
+        font-size: 40px;
+      }
+
+      .left h3 {
+        font-size: 24px;
+      }
+
+      .social-shape {
+        width: 90%;
+      }
+    }
+
+    .ad-sidebar {
+      width: 300px;
+      position: fixed;
+      right: 20px;
+      top: 100px;
+    }
+
+    @media(max-width:1024px) {
+      .ad-sidebar {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="container">
+  <div class="container">
 
-<!-- HERO SECTION -->
-<section class="hero">
-  <div class="left">
-    <h1>Jack Ashford</h1>
-    <h3>Senior Manager</h3>
-    <p>Lorem ipsum is typically a corrupted version of De finibus bonorum et malorum.</p>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="left">
+        <h1>Jack Ashford</h1>
+        <h3>Senior Manager</h3>
+        <p>Lorem ipsum is typically a corrupted version of De finibus bonorum et malorum.</p>
+      </div>
+      <div class="glass-card"></div>
+    </section>
+
+    <!-- SOCIAL SECTION -->
+    <section class="social-section">
+      <div class="social-shape">
+        <h2>Social Platform</h2>
+      </div>
+
+      <div class="social-show row">
+
+        <div class="col">
+          <a href="#" class="social-card">
+            <div class="social-icon twitter-icon">X</div>
+            <div class="social-info">
+              <h4>X / Twitter</h4>
+              <h5>@johndoe</h5>
+            </div>
+          </a>
+        </div>
+
+        <div class="col">
+          <a href="#" class="social-card">
+            <div class="social-icon facebook-icon">f</div>
+            <div class="social-info">
+              <h4>Facebook</h4>
+              <h5>@johndoe</h5>
+            </div>
+          </a>
+        </div>
+
+        <div class="col">
+          <a href="#" class="social-card">
+            <div class="social-icon linkedin-icon">in</div>
+            <div class="social-info">
+              <h4>LinkedIn</h4>
+              <h5>@johndoe</h5>
+            </div>
+          </a>
+        </div>
+
+        <div class="col">
+          <a href="#" class="social-card">
+            <div class="social-icon github-icon">GH</div>
+            <div class="social-info">
+              <h4>GitHub</h4>
+              <h5>@johndoe</h5>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <p>
+        Powered By
+        <a href="https://endlessdomains.io/" target="_blank">
+          <img src="https://endlessdomains.io/_next/static/media/endless_logo.182f73f9.svg">
+        </a>
+      </p>
+    </div>
+
   </div>
-  <div class="glass-card"></div>
-</section>
 
-<!-- SOCIAL SECTION -->
-<section class="social-section">
-  <div class="social-shape">
-    <h2>Social Platform</h2>
+  <!-- Ad Sidebar -->
+  <div class="ad-sidebar">
+    <script src="https://ad.gigapub.tech/script?id=5747"></script>
   </div>
 
-  <div class="social-show row">
-
-    <div class="col">
-      <a href="#" class="social-card">
-        <div class="social-icon twitter-icon">X</div>
-        <div class="social-info">
-          <h4>X / Twitter</h4>
-          <h5>@johndoe</h5>
-        </div>
-      </a>
-    </div>
-
-    <div class="col">
-      <a href="#" class="social-card">
-        <div class="social-icon facebook-icon">f</div>
-        <div class="social-info">
-          <h4>Facebook</h4>
-          <h5>@johndoe</h5>
-        </div>
-      </a>
-    </div>
-
-    <div class="col">
-      <a href="#" class="social-card">
-        <div class="social-icon linkedin-icon">in</div>
-        <div class="social-info">
-          <h4>LinkedIn</h4>
-          <h5>@johndoe</h5>
-        </div>
-      </a>
-    </div>
-
-    <div class="col">
-      <a href="#" class="social-card">
-        <div class="social-icon github-icon">GH</div>
-        <div class="social-info">
-          <h4>GitHub</h4>
-          <h5>@johndoe</h5>
-        </div>
-      </a>
-    </div>
-
-  </div>
-</section>
-
-<!-- FOOTER -->
-<div class="footer">
-  <p>
-    Powered By
-    <a href="https://endlessdomains.io/" target="_blank">
-      <img src="https://endlessdomains.io/_next/static/media/endless_logo.182f73f9.svg">
-    </a>
-  </p>
-</div>
-
-</div>
-
+  <script>
+    window.showGiga()
+      .then(() => console.log('ads opened'))
+      .catch(e => console.log('error'));
+  </script>
 </body>
 
-<script src="https://ad.gigapub.tech/script?id=5747"></script>
-<script>
-
-window.showGiga()
-  .then(() => {
-    console.log('ads opened')
-  })
-  .catch(e => {
-    console.log('error')
-  });
-</script>
 </html>
