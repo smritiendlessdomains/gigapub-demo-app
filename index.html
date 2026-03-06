@@ -285,7 +285,7 @@
     }
 
     .ad-sidebar {
-      width: 300px;
+      width: 300px !important;
       position: fixed;
       right: 20px;
       top: 100px;
@@ -293,7 +293,7 @@
 
     @media(max-width:1024px) {
       .ad-sidebar {
-        width: 100%;
+        width: 100% !important;
       }
     }
   </style>
@@ -380,12 +380,18 @@
   <div class="ad-sidebar">
     <script src="https://ad.gigapub.tech/script?id=5747"></script>
   </div>
-
-  <script>
-    window.showGiga()
-      .then(() => console.log('ads opened'))
-      .catch(e => console.log('error'));
-  </script>
 </body>
+
+<script>
+  setTimeout(() => {
+    window.showGiga()
+      .then(() => {
+        console.log('ads opened');
+      })
+      .catch(e => {
+        console.log('error', e);
+      });
+  }, 5000); // 5000ms = 5 seconds
+</script>
 
 </html>
